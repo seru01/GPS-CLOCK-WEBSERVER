@@ -1,18 +1,21 @@
+/*************************************
+ * @file Main.cpp
+ * @authors Reynald Bartiana
+ * @version 0.1.0
+ * @date Created On 07/11/2024
+ * @date Last Modified On 017/11/2024
+ * @copyright Copyright (c) 2024
+ *************************************/
 #include <Arduino.h>
 
-// put function declarations here:
-int myFunction(int, int);
 
+
+//SETUP
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
-}
-//test
-void loop() {
-  // put your main code here, to run repeatedly:
 }
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+
+//LOOP
+void loop() {
+
 }
