@@ -117,4 +117,18 @@ void setup() {
 
 void loop() {
     updateGPSData();
+    while (GPS.available()) {
+        gps.encode(GPS.read());
+
+        if (gps.time.isUpdated()) {
+            hour = gps.time.hour()+8;
+            minute = gps.time.minute();
+            second = gps.time.second();
+
+            char timeBuffer[10];
+            sprintf(timeBuffer, "%02d:%02d:%02d", gps.time.hour(), gps.time.minute(), gps.time.second());
+            Serial.print("GPS TIME: ");
+            Serial.println(timeBuffer);
+        }
+    }
 }
